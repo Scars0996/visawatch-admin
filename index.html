@@ -7,21 +7,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --bg:#080b14;--glass:rgba(255,255,255,0.05);--border:rgba(255,255,255,0.10);--border-h:rgba(255,255,255,0.18);
-  --text-1:#f0f0f8;--text-2:#a0a0c0;--text-3:#606080;
-  --accent:#8b6fff;--accent-dim:rgba(139,111,255,0.18);
-  --green:#00e680;--green-dim:rgba(0,230,128,0.12);
-  --red:#ff4455;--red-dim:rgba(255,68,85,0.12);
-  --amber:#ffb840;--r:10px;--r-lg:16px;
-}
+:root{--bg:#080b14;--glass:rgba(255,255,255,0.05);--border:rgba(255,255,255,0.10);--border-h:rgba(255,255,255,0.18);--text-1:#f0f0f8;--text-2:#a0a0c0;--text-3:#606080;--accent:#8b6fff;--accent-dim:rgba(139,111,255,0.18);--green:#00e680;--green-dim:rgba(0,230,128,0.12);--red:#ff4455;--red-dim:rgba(255,68,85,0.12);--amber:#ffb840;--r:10px;--r-lg:16px;}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-1);min-height:100vh;-webkit-font-smoothing:antialiased;}
 .orb{position:fixed;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0;opacity:0.18;}
 .orb-1{width:500px;height:500px;background:#3b1fa8;top:-150px;left:-150px;}
 .orb-2{width:400px;height:400px;background:#0a2a5e;bottom:-100px;right:-100px;}
 .scanlines{position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.04) 2px,rgba(0,0,0,0.04) 4px);pointer-events:none;z-index:0;}
-
-/* Login screen */
 .login-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;z-index:1;}
 .login-box{background:var(--glass);backdrop-filter:blur(24px);border:0.5px solid var(--border);border-radius:20px;padding:36px 32px;width:340px;text-align:center;}
 .login-icon{font-size:36px;margin-bottom:14px;}
@@ -37,22 +28,16 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-1);min
 .btn-login:hover{opacity:0.88;}
 .login-err{font-size:12px;color:var(--red);margin-top:10px;display:none;}
 .login-err.show{display:block;}
-
-/* Main admin */
-.admin-wrap{max-width:900px;margin:0 auto;padding:24px 20px;position:relative;z-index:1;display:none;}
+.admin-wrap{max-width:960px;margin:0 auto;padding:24px 20px;position:relative;z-index:1;display:none;}
 .admin-wrap.show{display:block;}
 .admin-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;}
 .admin-title{font-size:20px;font-weight:800;}
 .btn-logout-admin{background:var(--glass);border:0.5px solid var(--border);border-radius:var(--r);padding:7px 14px;color:var(--text-3);font-size:12px;cursor:pointer;font-family:'Inter',sans-serif;}
 .btn-logout-admin:hover{color:var(--text-1);border-color:var(--border-h);}
-
-/* Stats */
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px;}
 .stat-card{background:var(--glass);backdrop-filter:blur(20px);border:0.5px solid var(--border);border-radius:var(--r-lg);padding:16px;text-align:center;}
-.stat-val{font-size:28px;font-weight:800;color:var(--text-1);line-height:1;}
+.stat-val{font-size:28px;font-weight:800;line-height:1;}
 .stat-lbl{font-size:11px;color:var(--text-3);margin-top:4px;text-transform:uppercase;letter-spacing:0.8px;}
-
-/* Generate section */
 .gen-card{background:var(--glass);backdrop-filter:blur(20px);border:0.5px solid var(--border);border-radius:var(--r-lg);padding:18px;margin-bottom:16px;}
 .section-title{font-size:12px;font-weight:700;color:var(--text-2);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;}
 .gen-row{display:flex;gap:10px;align-items:flex-end;}
@@ -67,8 +52,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-1);min
 .new-key-display.show{display:flex;}
 .new-key-val{font-size:18px;font-weight:700;letter-spacing:0.15em;color:var(--green);font-family:'Space Mono',monospace;}
 .btn-copy{background:var(--green-dim);border:0.5px solid rgba(0,230,128,0.3);border-radius:var(--r);padding:6px 12px;color:var(--green);font-size:11px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;}
-
-/* Table */
 .table-card{background:var(--glass);backdrop-filter:blur(20px);border:0.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;}
 .table-header{padding:14px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:0.5px solid var(--border);}
 .search-input{background:rgba(0,0,0,0.3);border:0.5px solid var(--border);border-radius:var(--r);padding:7px 12px;color:var(--text-1);font-size:12px;font-family:'Inter',sans-serif;outline:none;width:220px;}
@@ -77,30 +60,23 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-1);min
 .btn-refresh{background:var(--glass);border:0.5px solid var(--border);border-radius:var(--r);padding:7px 12px;color:var(--text-2);font-size:12px;cursor:pointer;font-family:'Inter',sans-serif;}
 table{width:100%;border-collapse:collapse;}
 th{padding:10px 16px;text-align:left;font-size:10px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:0.8px;border-bottom:0.5px solid var(--border);}
-td{padding:12px 16px;font-size:12px;border-bottom:0.5px solid rgba(255,255,255,0.04);vertical-align:middle;}
+td{padding:11px 16px;font-size:12px;border-bottom:0.5px solid rgba(255,255,255,0.04);vertical-align:middle;}
 tr:last-child td{border-bottom:none;}
 tr:hover td{background:rgba(255,255,255,0.02);}
 .key-cell{font-family:'Space Mono',monospace;font-weight:700;color:var(--accent);font-size:13px;}
 .badge{display:inline-block;padding:3px 8px;border-radius:20px;font-size:10px;font-weight:700;}
 .badge-active{background:var(--green-dim);color:var(--green);border:0.5px solid rgba(0,230,128,0.3);}
 .badge-revoked{background:var(--red-dim);color:var(--red);border:0.5px solid rgba(255,68,85,0.3);}
-.device-cell{font-size:10px;color:var(--text-3);font-family:'Space Mono',monospace;}
+.device-cell{font-size:10px;color:var(--text-3);}
 .device-cell.linked{color:var(--green);}
 .btn-revoke{background:var(--red-dim);border:0.5px solid rgba(255,68,85,0.25);border-radius:6px;padding:4px 10px;color:var(--red);font-size:10px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;}
 .btn-revoke:hover{background:rgba(255,68,85,0.2);}
 .btn-restore{background:var(--green-dim);border:0.5px solid rgba(0,230,128,0.25);border-radius:6px;padding:4px 10px;color:var(--green);font-size:10px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;}
 .empty-row td{text-align:center;color:var(--text-3);padding:32px;}
 .loading{text-align:center;padding:32px;color:var(--text-3);font-size:13px;}
-
-/* Toast */
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(40px);background:rgba(10,12,24,0.95);border:0.5px solid var(--accent);border-radius:50px;padding:8px 20px;color:var(--text-1);font-size:12px;font-weight:500;z-index:100;opacity:0;transition:all 0.25s;pointer-events:none;white-space:nowrap;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
-
-@media(max-width:600px){
-  .stats-row{grid-template-columns:repeat(2,1fr);}
-  .gen-row{flex-direction:column;}
-  th:nth-child(4),td:nth-child(4),th:nth-child(5),td:nth-child(5){display:none;}
-}
+@media(max-width:600px){.stats-row{grid-template-columns:repeat(2,1fr);}.gen-row{flex-direction:column;}th:nth-child(5),td:nth-child(5),th:nth-child(6),td:nth-child(6){display:none;}}
 </style>
 </head>
 <body>
@@ -126,21 +102,17 @@ tr:hover td{background:rgba(255,255,255,0.02);}
     <div class="admin-title">🛂 Visa<span class="accent">Watch</span> · Licences</div>
     <button class="btn-logout-admin" onclick="logoutAdmin()">Déconnexion</button>
   </div>
-
-  <!-- Stats -->
   <div class="stats-row">
-    <div class="stat-card"><div class="stat-val" id="sTotal">--</div><div class="stat-lbl">Total licences</div></div>
+    <div class="stat-card"><div class="stat-val" id="sTotal">--</div><div class="stat-lbl">Total</div></div>
     <div class="stat-card"><div class="stat-val" id="sActive" style="color:var(--green)">--</div><div class="stat-lbl">Actives</div></div>
     <div class="stat-card"><div class="stat-val" id="sRevoked" style="color:var(--red)">--</div><div class="stat-lbl">Révoquées</div></div>
     <div class="stat-card"><div class="stat-val" id="sAlerts" style="color:var(--amber)">--</div><div class="stat-lbl">Alertes 24h</div></div>
   </div>
-
-  <!-- Generate -->
   <div class="gen-card">
     <div class="section-title">Générer une nouvelle licence</div>
     <div class="gen-row">
-      <div class="gen-field"><label>Nom du client (optionnel)</label><input type="text" id="genName" placeholder="Ex: Ahmed B."></div>
-      <div class="gen-field"><label>Notes</label><input type="text" id="genNotes" placeholder="Ex: paiement reçu 15/05"></div>
+      <div class="gen-field"><label>Nom du client</label><input type="text" id="genName" placeholder="Ex: Ahmed B."></div>
+      <div class="gen-field"><label>Notes</label><input type="text" id="genNotes" placeholder="Ex: paiement reçu"></div>
       <button class="btn-gen" onclick="generateLicense()">+ Générer clé</button>
     </div>
     <div class="new-key-display" id="newKeyDisplay">
@@ -151,8 +123,6 @@ tr:hover td{background:rgba(255,255,255,0.02);}
       <button class="btn-copy" onclick="copyKey()">Copier</button>
     </div>
   </div>
-
-  <!-- Table -->
   <div class="table-card">
     <div class="table-header">
       <div class="section-title" style="margin-bottom:0">Toutes les licences</div>
@@ -161,220 +131,140 @@ tr:hover td{background:rgba(255,255,255,0.02);}
         <button class="btn-refresh" onclick="loadLicenses()">↻ Actualiser</button>
       </div>
     </div>
-    <div id="tableWrap">
-      <div class="loading">Chargement...</div>
-    </div>
+    <div id="tableWrap"><div class="loading">Chargement...</div></div>
   </div>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-const SUPABASE_URL = 'https://erjyfyzmhxsqkuxwtwbc.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVyanlmeXptaHhzcWt1eHd0d2JjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk1Mzc4MTgsImV4cCI6MjA5NTExMzgxOH0.v0VZ77UP6DvLz0cswyCMpisynYyqn41zeA20_x9dACE';
+const SUPABASE_URL='https://erjyfyzmhxsqkuxwtwbc.supabase.co';
+const SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVyanlmeXptaHhzcWt1eHd0d2JjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk1Mzc4MTgsImV4cCI6MjA5NTExMzgxOH0.v0VZ77UP6DvLz0cswyCMpisynYyqn41zeA20_x9dACE';
 
-// ⚠️ Change this password before deploying!
-const ADMIN_PASSWORD = 'Scars09960996';
+// ⚠️ CHANGE THIS PASSWORD
+const ADMIN_PASSWORD='visawatch2024admin';
 
-let allLicenses = [];
-let newGeneratedKey = '';
+let allLicenses=[];
+let newGeneratedKey='';
 
-function login() {
-  const pass = document.getElementById('adminPass').value;
-  if (pass === ADMIN_PASSWORD) {
-    document.getElementById('loginWrap').style.display = 'none';
+function login(){
+  const pass=document.getElementById('adminPass').value;
+  if(pass===ADMIN_PASSWORD){
+    document.getElementById('loginWrap').style.display='none';
     document.getElementById('adminWrap').classList.add('show');
-    sessionStorage.setItem('vw_admin', '1');
-    loadLicenses();
-    loadStats();
-  } else {
+    sessionStorage.setItem('vw_admin','1');
+    loadLicenses();loadStats();
+  }else{
     document.getElementById('loginErr').classList.add('show');
-    document.getElementById('adminPass').value = '';
+    document.getElementById('adminPass').value='';
   }
 }
 
-function logoutAdmin() {
+function logoutAdmin(){
   sessionStorage.removeItem('vw_admin');
-  document.getElementById('loginWrap').style.display = 'flex';
+  document.getElementById('loginWrap').style.display='flex';
   document.getElementById('adminWrap').classList.remove('show');
-  document.getElementById('adminPass').value = '';
+  document.getElementById('adminPass').value='';
 }
 
-// Auto-login if session active
-if (sessionStorage.getItem('vw_admin') === '1') {
-  document.getElementById('loginWrap').style.display = 'none';
+if(sessionStorage.getItem('vw_admin')==='1'){
+  document.getElementById('loginWrap').style.display='none';
   document.getElementById('adminWrap').classList.add('show');
-  loadLicenses();
-  loadStats();
+  loadLicenses();loadStats();
 }
 
-// Generate unique license key
-function generateKeyString() {
-  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-  const seg = () => Array.from({length:4}, () => chars[Math.floor(Math.random()*chars.length)]).join('');
+function generateKeyString(){
+  const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  const seg=()=>Array.from({length:4},()=>chars[Math.floor(Math.random()*chars.length)]).join('');
   return `VW-${seg()}-${seg()}`;
 }
 
-async function generateLicense() {
-  const name = document.getElementById('genName').value.trim();
-  const notes = document.getElementById('genNotes').value.trim();
-  const key = generateKeyString();
-
-  try {
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/licenses`, {
-      method: 'POST',
-      headers: {
-        'apikey': SUPABASE_KEY,
-        'Authorization': `Bearer ${SUPABASE_KEY}`,
-        'Content-Type': 'application/json',
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify({
-        key,
-        status: 'active',
-        customer_name: name || null,
-        notes: notes || null,
-        created_at: new Date().toISOString()
-      })
+async function generateLicense(){
+  const name=document.getElementById('genName').value.trim();
+  const notes=document.getElementById('genNotes').value.trim();
+  const key=generateKeyString();
+  try{
+    const res=await fetch(`${SUPABASE_URL}/rest/v1/licenses`,{
+      method:'POST',
+      headers:{'apikey':SUPABASE_KEY,'Authorization':`Bearer ${SUPABASE_KEY}`,'Content-Type':'application/json','Prefer':'return=minimal'},
+      body:JSON.stringify({key,status:'active',customer_name:name||null,notes:notes||null,created_at:new Date().toISOString()})
     });
-
-    if (res.ok || res.status === 201) {
-      newGeneratedKey = key;
-      document.getElementById('newKeyVal').textContent = key;
+    if(res.ok||res.status===201){
+      newGeneratedKey=key;
+      document.getElementById('newKeyVal').textContent=key;
       document.getElementById('newKeyDisplay').classList.add('show');
-      document.getElementById('genName').value = '';
-      document.getElementById('genNotes').value = '';
+      document.getElementById('genName').value='';
+      document.getElementById('genNotes').value='';
       showToast('Licence générée ✓');
-      loadLicenses();
-      loadStats();
-    } else {
-      showToast('Erreur lors de la génération');
-    }
-  } catch (e) {
-    showToast('Erreur réseau');
-  }
+      loadLicenses();loadStats();
+    }else{showToast('Erreur lors de la génération');}
+  }catch(e){showToast('Erreur réseau');}
 }
 
-function copyKey() {
-  navigator.clipboard.writeText(newGeneratedKey).then(() => showToast('Clé copiée ✓'));
-}
+function copyKey(){navigator.clipboard.writeText(newGeneratedKey).then(()=>showToast('Clé copiée ✓'));}
 
-async function loadLicenses() {
-  document.getElementById('tableWrap').innerHTML = '<div class="loading">Chargement...</div>';
-  try {
-    const res = await fetch(
-      `${SUPABASE_URL}/rest/v1/licenses?order=created_at.desc&select=*`,
-      { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } }
-    );
-    allLicenses = await res.json();
+async function loadLicenses(){
+  document.getElementById('tableWrap').innerHTML='<div class="loading">Chargement...</div>';
+  try{
+    const res=await fetch(`${SUPABASE_URL}/rest/v1/licenses?order=created_at.desc&select=*`,{headers:{'apikey':SUPABASE_KEY,'Authorization':`Bearer ${SUPABASE_KEY}`}});
+    allLicenses=await res.json();
     renderTable(allLicenses);
-  } catch (e) {
-    document.getElementById('tableWrap').innerHTML = '<div class="loading">Erreur de chargement</div>';
-  }
+  }catch(e){document.getElementById('tableWrap').innerHTML='<div class="loading">Erreur de chargement</div>';}
 }
 
-async function loadStats() {
-  try {
-    const [licRes, alertRes] = await Promise.all([
-      fetch(`${SUPABASE_URL}/rest/v1/licenses?select=status`, { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } }),
-      fetch(`${SUPABASE_URL}/rest/v1/alerts?created_at=gte.${new Date(Date.now()-86400000).toISOString()}&select=id`, { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } })
+async function loadStats(){
+  try{
+    const[licRes,alertRes]=await Promise.all([
+      fetch(`${SUPABASE_URL}/rest/v1/licenses?select=status`,{headers:{'apikey':SUPABASE_KEY,'Authorization':`Bearer ${SUPABASE_KEY}`}}),
+      fetch(`${SUPABASE_URL}/rest/v1/alerts?created_at=gte.${new Date(Date.now()-86400000).toISOString()}&select=id`,{headers:{'apikey':SUPABASE_KEY,'Authorization':`Bearer ${SUPABASE_KEY}`}})
     ]);
-    const lics = await licRes.json();
-    const alerts = await alertRes.json();
-    const active = lics.filter(l => l.status === 'active').length;
-    const revoked = lics.filter(l => l.status === 'revoked').length;
-    document.getElementById('sTotal').textContent = lics.length;
-    document.getElementById('sActive').textContent = active;
-    document.getElementById('sRevoked').textContent = revoked;
-    document.getElementById('sAlerts').textContent = alerts.length;
-  } catch (e) {}
+    const lics=await licRes.json();
+    const alerts=await alertRes.json();
+    document.getElementById('sTotal').textContent=lics.length;
+    document.getElementById('sActive').textContent=lics.filter(l=>l.status==='active').length;
+    document.getElementById('sRevoked').textContent=lics.filter(l=>l.status==='revoked').length;
+    document.getElementById('sAlerts').textContent=alerts.length;
+  }catch(e){}
 }
 
-function renderTable(licenses) {
-  if (!licenses.length) {
-    document.getElementById('tableWrap').innerHTML = '<table><tr class="empty-row"><td colspan="7">Aucune licence pour le moment. Générez-en une ci-dessus.</td></tr></table>';
-    return;
-  }
-  const rows = licenses.map(l => {
-    const pcLinked = l.pc_hardware_id ? `<span class="device-cell linked">✓ Lié</span>` : `<span class="device-cell">—</span>`;
-    const phoneLinked = l.phone_device_id ? `<span class="device-cell linked">✓ Lié</span>` : `<span class="device-cell">—</span>`;
-    const badge = l.status === 'active'
-      ? `<span class="badge badge-active">ACTIVE</span>`
-      : `<span class="badge badge-revoked">RÉVOQUÉE</span>`;
-    const actionBtn = l.status === 'active'
-      ? `<button class="btn-revoke" onclick="revokeKey('${l.key}')">Révoquer</button>`
-      : `<button class="btn-restore" onclick="restoreKey('${l.key}')">Restaurer</button>`;
-    const created = l.created_at ? new Date(l.created_at).toLocaleDateString('fr-DZ') : '—';
-    return `<tr>
-      <td class="key-cell">${l.key}</td>
-      <td>${l.customer_name || '<span style="color:var(--text-3)">—</span>'}</td>
-      <td>${badge}</td>
-      <td>${pcLinked}</td>
-      <td>${phoneLinked}</td>
-      <td style="color:var(--text-3);font-size:11px">${created}</td>
-      <td>${actionBtn}</td>
-    </tr>`;
+function renderTable(licenses){
+  if(!licenses.length){document.getElementById('tableWrap').innerHTML='<table><tr class="empty-row"><td colspan="7">Aucune licence. Générez-en une ci-dessus.</td></tr></table>';return;}
+  const rows=licenses.map(l=>{
+    const pcLinked=l.pc_hardware_id?`<span class="device-cell linked">✓ PC lié</span>`:`<span class="device-cell">—</span>`;
+    const phoneLinked=l.phone_device_id?`<span class="device-cell linked">✓ Tél lié</span>`:`<span class="device-cell">—</span>`;
+    const fcm=l.fcm_token?`<span class="device-cell linked">✓ Push</span>`:`<span class="device-cell">—</span>`;
+    const badge=l.status==='active'?`<span class="badge badge-active">ACTIVE</span>`:`<span class="badge badge-revoked">RÉVOQUÉE</span>`;
+    const action=l.status==='active'
+      ?`<button class="btn-revoke" onclick="revokeKey('${l.key}')">Révoquer</button>`
+      :`<button class="btn-restore" onclick="restoreKey('${l.key}')">Restaurer</button>`;
+    const created=l.created_at?new Date(l.created_at).toLocaleDateString('fr-DZ'):'—';
+    return`<tr><td class="key-cell">${l.key}</td><td>${l.customer_name||'<span style="color:var(--text-3)">—</span>'}</td><td>${badge}</td><td>${pcLinked}</td><td>${phoneLinked}</td><td>${fcm}</td><td style="color:var(--text-3);font-size:11px">${created}</td><td>${action}</td></tr>`;
   }).join('');
-
-  document.getElementById('tableWrap').innerHTML = `
-    <table>
-      <thead>
-        <tr>
-          <th>Clé</th>
-          <th>Client</th>
-          <th>Statut</th>
-          <th>PC</th>
-          <th>Téléphone</th>
-          <th>Créée</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>${rows}</tbody>
-    </table>`;
+  document.getElementById('tableWrap').innerHTML=`<table><thead><tr><th>Clé</th><th>Client</th><th>Statut</th><th>PC</th><th>Téléphone</th><th>Push</th><th>Créée</th><th>Action</th></tr></thead><tbody>${rows}</tbody></table>`;
 }
 
-function filterTable() {
-  const q = document.getElementById('searchInput').value.toLowerCase();
-  const filtered = allLicenses.filter(l =>
-    (l.key||'').toLowerCase().includes(q) ||
-    (l.customer_name||'').toLowerCase().includes(q) ||
-    (l.notes||'').toLowerCase().includes(q)
-  );
-  renderTable(filtered);
+function filterTable(){
+  const q=document.getElementById('searchInput').value.toLowerCase();
+  renderTable(allLicenses.filter(l=>(l.key||'').toLowerCase().includes(q)||(l.customer_name||'').toLowerCase().includes(q)||(l.notes||'').toLowerCase().includes(q)));
 }
 
-async function revokeKey(key) {
-  if (!confirm(`Révoquer la licence ${key} ? Le client perdra l'accès immédiatement.`)) return;
-  try {
-    await fetch(`${SUPABASE_URL}/rest/v1/licenses?key=eq.${key}`, {
-      method: 'PATCH',
-      headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ status: 'revoked' })
-    });
-    showToast(`Licence ${key} révoquée`);
-    loadLicenses(); loadStats();
-  } catch (e) { showToast('Erreur réseau'); }
+async function revokeKey(key){
+  if(!confirm(`Révoquer la licence ${key} ?`))return;
+  try{
+    await fetch(`${SUPABASE_URL}/rest/v1/licenses?key=eq.${key}`,{method:'PATCH',headers:{'apikey':SUPABASE_KEY,'Authorization':`Bearer ${SUPABASE_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({status:'revoked'})});
+    showToast(`Licence ${key} révoquée`);loadLicenses();loadStats();
+  }catch(e){showToast('Erreur réseau');}
 }
 
-async function restoreKey(key) {
-  try {
-    await fetch(`${SUPABASE_URL}/rest/v1/licenses?key=eq.${key}`, {
-      method: 'PATCH',
-      headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ status: 'active' })
-    });
-    showToast(`Licence ${key} restaurée`);
-    loadLicenses(); loadStats();
-  } catch (e) { showToast('Erreur réseau'); }
+async function restoreKey(key){
+  try{
+    await fetch(`${SUPABASE_URL}/rest/v1/licenses?key=eq.${key}`,{method:'PATCH',headers:{'apikey':SUPABASE_KEY,'Authorization':`Bearer ${SUPABASE_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({status:'active'})});
+    showToast(`Licence ${key} restaurée`);loadLicenses();loadStats();
+  }catch(e){showToast('Erreur réseau');}
 }
 
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg; t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2500);
-}
-
-document.getElementById('adminPass').addEventListener('keydown', e => { if (e.key === 'Enter') login(); });
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+document.getElementById('adminPass').addEventListener('keydown',e=>{if(e.key==='Enter')login();});
 </script>
 </body>
 </html>
